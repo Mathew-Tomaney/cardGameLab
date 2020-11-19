@@ -27,7 +27,16 @@ public class DeckTest {
     @Test
     public void deckIsOrdered(){
         deck.fillDeck();
-        assertEquals(RankType.ACE, deck.getFirstCard().getRank());
-        assertEquals(SuitType.SPADES, deck.getFirstCard().getSuit());
+        assertEquals(RankType.ACE, deck.dealCard().getRank());
+        assertEquals(SuitType.SPADES, deck.dealCard().getSuit());
     }
+
+    @Test
+    public void cardHasBeenDealt(){
+        deck.fillDeck();
+        deck.dealCard();
+        assertEquals(51, deck.cardsInDeck());
+    }
+
+
 }
