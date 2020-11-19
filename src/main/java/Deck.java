@@ -20,4 +20,8 @@ public class Deck {
         }
     }
 
+    public Card getFirstCard(){
+        return this.cards.get(0);
+    }
+
 }
