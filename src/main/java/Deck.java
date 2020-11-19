@@ -12,4 +12,12 @@ public class Deck {
         return this.cards.size();
     }
 
+    public void fillDeck(){
+        for (SuitType suit : SuitType.values()){
+            for (RankType rank : RankType.values()){
+                cards.add(new Card(suit, rank));
+            }
+        }
+    }
+
 }
