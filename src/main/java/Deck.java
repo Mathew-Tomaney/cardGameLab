@@ -33,4 +33,8 @@ public class Deck {
         shuffle(this.cards);
     }
 
+    public void dealCardToPlayer(Player player){
+        player.addCard(this.dealCard());
+    }
+
 }
