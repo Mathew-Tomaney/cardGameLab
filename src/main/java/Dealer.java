@@ -15,8 +15,8 @@ public class Dealer {
         this.hand.add(card);
     }
 
-//    public void dealCardToPlayer(Player player){
-//        player.addCard(this.dealCard());
-//    }
-//    public void dealCardToDealer(Dealer dealer) { dealer.addCard(this.dealCard()); }
+    public void dealCardToPlayer(Deck deck, Player player){
+        player.addCard(deck.dealCard());
+    }
+    public void dealCardToSelf(Deck deck) { this.addCard(deck.dealCard()); }
 }
