@@ -21,4 +21,12 @@ public class Player {
 
     public String getName() { return this.name; }
 
+    public int getTotalHand() {
+        int total = 0;
+        for(Card card : this.getHand()){
+            total += card.getRankValue();
+        }
+        return total;
+    }
+
 }

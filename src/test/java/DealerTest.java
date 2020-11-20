@@ -38,4 +38,10 @@ public class DealerTest {
         dealer.dealCardToSelf(deck);
         assertEquals(1, dealer.getHand().get(0).getRankValue());
     }
+    @Test
+    public void canGetTotalHand(){
+        dealer.addCard(card);
+        dealer.addCard(card);
+        assertEquals(2, dealer.getTotalHand());
+    }
 }

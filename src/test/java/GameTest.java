@@ -48,10 +48,11 @@ public class GameTest {
         game.addPlayer(player);
         dealer.addCard(card);
         dealer.addCard(card);
+        dealer.addCard(card2);
         player.addCard(card2);
         player.addCard(card2);
         player2.addCard(card);
         player2.addCard(card2);
-        assertEquals(20, game.GetHighestTotalScore());
+        assertEquals(20, game.getHighestTotalScore());
     }
 }

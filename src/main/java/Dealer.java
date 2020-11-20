@@ -19,4 +19,12 @@ public class Dealer {
         player.addCard(deck.dealCard());
     }
     public void dealCardToSelf(Deck deck) { this.addCard(deck.dealCard()); }
+
+    public int getTotalHand() {
+        int total = 0;
+        for(Card card : this.getHand()){
+            total += card.getRankValue();
+        }
+        return total;
+    }
 }

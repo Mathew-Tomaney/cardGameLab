@@ -32,4 +32,11 @@ public class PlayerTest {
     public void canGetName(){
         assertEquals("Mat", player.getName());
     }
+
+    @Test
+    public void canGetTotalHand(){
+        player.addCard(card);
+        player.addCard(card);
+        assertEquals(2, player.getTotalHand());
+    }
 }

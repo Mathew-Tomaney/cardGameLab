@@ -30,7 +30,18 @@ public class Game {
         }
     }
 
-
-
-
+    public int getHighestTotalScore(){
+        int highScore = 0;
+        int dealerScore = dealer.getTotalHand();
+        for(Player player : players){
+            if (player.getTotalHand() > highScore){
+                highScore = player.getTotalHand();
+            }
+        }
+        if (highScore > dealerScore){
+            return highScore;
+        }else {
+            return dealerScore;
+        }
+    }
 }
