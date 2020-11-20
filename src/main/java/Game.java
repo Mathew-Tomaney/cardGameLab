@@ -19,5 +19,16 @@ public class Game {
         return this.players;
     }
 
+    public void start(){
+        deck.fillDeck();
+//        deck.shuffleCards();
+        for(int i = 0; i < 2; i++){
+            for(Player player : players){
+                dealer.dealCardToPlayer(deck, player);
+            }
+            dealer.dealCardToSelf(deck);
+        }
+    }
+
 
 }

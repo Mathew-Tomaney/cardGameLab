@@ -13,12 +13,12 @@ public class GameTest {
 
     @Before
     public void before(){
-        game = new Game(dealer, deck);
         dealer = new Dealer();
         player = new Player("Mat");
         player2 = new Player("Suvi");
 //        card = new Card(SuitType.SPADES, RankType.ACE);
         deck = new Deck();
+        game = new Game(dealer, deck);
     }
 
     @Test
@@ -35,8 +35,8 @@ public class GameTest {
         assertEquals(2, player.getHand().size() );
         assertEquals(2, player2.getHand().size());
         assertEquals(2, dealer.getHand().size());
-        assertEquals(RankType.ACE, dealer.getHand().get(0).getRank());
-        assertEquals(RankType.TWO, player.getHand().get(0).getRank());
-        assertEquals(RankType.SIX, player2.getHand().get(1).getRank());
+        assertEquals(RankType.ACE, player.getHand().get(0).getRank());
+        assertEquals(RankType.TWO, player2.getHand().get(0).getRank());
+        assertEquals(RankType.SIX, dealer.getHand().get(1).getRank());
     }
 }
