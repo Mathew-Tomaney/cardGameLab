@@ -8,6 +8,7 @@ public class GameTest {
     Player player;
     Player player2;
     Card card;
+    Card card2;
     Deck deck;
     Game game;
 
@@ -16,7 +17,8 @@ public class GameTest {
         dealer = new Dealer();
         player = new Player("Mat");
         player2 = new Player("Suvi");
-//        card = new Card(SuitType.SPADES, RankType.ACE);
+        card = new Card(SuitType.SPADES, RankType.ACE);
+        card2 = new Card(SuitType.SPADES, RankType.KING);
         deck = new Deck();
         game = new Game(dealer, deck);
     }
@@ -38,5 +40,18 @@ public class GameTest {
         assertEquals(RankType.ACE, player.getHand().get(0).getRank());
         assertEquals(RankType.TWO, player2.getHand().get(0).getRank());
         assertEquals(RankType.SIX, dealer.getHand().get(1).getRank());
+    }
+
+    @Test
+    public void canGetHighestTotalScore(){
+        game.addPlayer(player);
+        game.addPlayer(player);
+        dealer.addCard(card);
+        dealer.addCard(card);
+        player.addCard(card2);
+        player.addCard(card2);
+        player2.addCard(card);
+        player2.addCard(card2);
+        assertEquals(20, game.GetHighestTotalScore());
     }
 }
