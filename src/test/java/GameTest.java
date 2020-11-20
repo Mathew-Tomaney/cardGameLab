@@ -21,7 +21,7 @@ public class GameTest {
 
     @Test
     public void canAddPlayer(){
-        game.addPlayer();
+        game.addPlayer(player);
         assertEquals(1, game.getPlayers().size());
     }
 }
