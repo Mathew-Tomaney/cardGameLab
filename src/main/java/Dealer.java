@@ -11,6 +11,10 @@ public class Dealer {
         return this.hand;
     }
 
+    public void addCard(Card card){
+        this.hand.add(card);
+    }
+
 //    public void dealCardToPlayer(Player player){
 //        player.addCard(this.dealCard());
 //    }
