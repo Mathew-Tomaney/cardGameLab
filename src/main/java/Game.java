@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class Game {
     private ArrayList<Player> players;
-    private Dealer dealer;
     private Deck deck;
+    private Dealer dealer;
 
-    public Game(){
+    public Game(Dealer dealer, Deck deck){
         this.players = new ArrayList<Player>();
-        this.dealer = new Dealer();
-        this.deck = new Deck();
+        this.deck = deck;
+        this.dealer = dealer;
     }
 
     public void addPlayer(Player player){
@@ -18,4 +18,6 @@ public class Game {
     public ArrayList<Player> getPlayers(){
         return this.players;
     }
+
+
 }
