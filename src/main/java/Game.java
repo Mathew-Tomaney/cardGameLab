@@ -38,10 +38,6 @@ public class Game {
                 highScore = player.getTotalHand();
             }
         }
-        if (highScore > dealerScore){
-            return highScore;
-        }else {
-            return dealerScore;
-        }
+        return Math.max(highScore, dealerScore);
     }
 }

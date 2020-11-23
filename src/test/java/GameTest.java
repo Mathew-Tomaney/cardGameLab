@@ -55,4 +55,9 @@ public class GameTest {
         player2.addCard(card2);
         assertEquals(20, game.getHighestTotalScore());
     }
+
+    @Test
+    public void canGetWinner(){
+
+    }
 }
